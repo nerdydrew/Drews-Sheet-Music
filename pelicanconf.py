@@ -19,3 +19,10 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['more_categories']
 
 PATH_METADATA = '(?P<category>.*)/.*'
+
+# URLs
+ARTICLE_URL = '{category}/{slug}'
+ARTICLE_SAVE_AS = '%s/index.html' % ARTICLE_URL
+
+CATEGORY_URL = '{slug}'
+CATEGORY_SAVE_AS = '%s/index.html' % CATEGORY_URL
