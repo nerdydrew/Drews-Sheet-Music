@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+
+{% block content %}
+	<h2>{{ article.title }}</h2>
+
+	{% for cat in article.category.ancestors or [article.category] %}
+		<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.shortname or cat }}</a> {{ '&gt;' if not loop.last }}
+	{% endfor %}
+
+	{{ article.content }}
+
+{% endblock %}

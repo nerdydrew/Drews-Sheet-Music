@@ -9,6 +9,8 @@ PATH = 'content'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = u'en'
 
+THEME = 'theme'
+
 DEFAULT_PAGINATION = False
 RELATIVE_URLS = False
 
