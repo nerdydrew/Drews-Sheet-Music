@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 SITENAME = u"Drew\u2019s Sheet Music"
-SITEURL = '/sheetmusic'
+SITEURL = ''
 
 PATH = 'content'
 TIMEZONE = 'America/New_York'
