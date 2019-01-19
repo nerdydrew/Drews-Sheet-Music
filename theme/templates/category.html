@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{% for cat in category.ancestors|sort(reverse=True) or [category] %}
+		{{ cat.shortname or cat }}
+		{{ ' &lt;' if not loop.last }}
+	{% endfor %}
+	{{ TITLE_SEPARATOR}} {{ super() }}
+{% endblock %}
+
+{% block content %}
+	<header>
+		<h1>
+			{% for cat in category.ancestors or [category] %}
+				{% if not loop.last %}
+					<a href="{{ SITEURL }}/{{ cat.url }}">
+				{% endif %}
+				{{ cat.shortname or cat }}
+				{{ '</a> &gt;' if not loop.last }}
+			{% endfor %}
+		</h1>
+	</header>
+
+	<section id="sheetmusic">
+		<ul class="sm">
+			{% for song in articles %}
+				<li>
+					<a href="{{SITEURL}}/{{ song.url }}"><span class="name">{{ song.title }}</span></a>
+					<span class="files">
+						<a href="{{ SITEURL }}/files/{{ song.fileslug }}.pdf">PDF</a>
+						<a href="{{ SITEURL }}/files/{{ song.fileslug }}.mid">MIDI</a>
+						<a href="{{ SITEURL }}/files/{{ song.fileslug }}.xml">MusicXML</a>
+					</span>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+{% endblock %}
