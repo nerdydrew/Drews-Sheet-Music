@@ -1,0 +1,85 @@
+html,body,div,dl,dt,dd,ul,ol,li,pre,form,label,fieldset,p,blockquote{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
+html{background:#f9f8ef;color:#462e12;font:1em/1.7 Georgia,serif;text-shadow:1px 1px 0 rgba(255,255,255,.5)}
+body{margin:0 auto;max-width:38em;padding:0 1em}
+
+a{color:#070;text-decoration:underline}
+a:hover{color:#090}
+
+h1,h2,h3,h4,h5,h6{margin:0;font-weight:400;font-variant:small-caps;letter-spacing:.05em}
+h1{font-size:2em}h2{font-size:1.5em}h3,h4,h5,h6{font-size:1.25em}
+h1 a,h2 a{text-decoration:none}
+
+p,ul,ol{margin:0 0 1.5em}
+
+ul,ol{padding-left:2em}
+ul ul,ol ol{margin:0}
+
+input[type="search"]{width:20em}
+
+#header{margin-bottom:1em}
+#header h1{font-size:2.5em;margin:.25em 0;text-align:center}
+#header h1 a{text-decoration:none}
+
+
+#header nav{font-size:.875em;text-align:center}
+
+#header ul{list-style:none;margin:0;padding:0;z-index:100}
+#header ul li{position:relative;display:inline-block;margin:.5em 0;}
+#header ul a{padding:.5em 2em;background:#CBD7B3;color:#000;text-decoration:none;border:1px solid #613F19;margin-left:-1px;white-space:nowrap}
+
+#header ul li ul{display:none}
+#header ul li:hover ul{display:block;position:absolute;top:1.8em;left:0;z-index:200;text-align:left;box-shadow:.5em .5em 1em rgba(0,0,0,.25)}
+#header ul li:hover ul li{display:inline;margin:0}
+#header ul li:hover a{background:#ACBF87}
+#header ul li:hover ul li a{display:block;padding:.25em 1em;background:#ACBF87;border-top-width:0}
+#header ul li:hover ul li:first-child a{border-top-width:1px}
+#header ul li:hover ul li a:hover{background:#CC9E48}
+
+
+article{clear:both}
+article header p{font-size:.875em;opacity:.8;margin:.5em 0 1em}
+
+
+footer{margin:3em 0;font-size:.875em;text-align:center;color:rgba(0,0,0,.75);clear:both}
+
+
+/** Background colors */
+#sheetmusic .origins > li > a{background:#ACBF87;font-weight:700}
+#sheetmusic li{background:#CBD7B3}
+#sheetmusic .origins > li > a:hover,#sheetmusic .sm > li:hover{background:#CC9E48}
+
+/** Indenting (dumb, but this does what I want) */
+#sheetmusic ul{padding-left:0;list-style-type:none}
+#sheetmusic ul ul li > a{padding-left:1em}
+#sheetmusic ul ul ul li > a{padding-left:2em}
+#sheetmusic ul ul ul ul li > a{padding-left:3em}
+
+/** Links */
+#sheetmusic a{color:#000;text-decoration:none}
+#sheetmusic li > a{display:block;padding:.125em .5em}
+
+/** Table-ness */
+#sheetmusic{border:1px solid #613F19;border-top-width:0}
+#sheetmusic ul{display:table;width:100%;border-collapse:collapse;margin:0}
+#sheetmusic .origins > li, #sheetmusic .sm > li{display:table-row}
+#sheetmusic .origins > li > a, #sheetmusic .sm > li{border-top:1px solid #613F19}
+#sheetmusic .name, #sheetmusic .files{display:table-cell}
+
+#sheetmusic .files{white-space:nowrap;width:1%;padding:0 .5em}
+#sheetmusic .files a{margin:0 .25em}
+#sheetmusic .files a:hover{text-decoration:underline}
+
+
+
+@media (max-width:36em){
+#header ul a{margin:0}
+#header > nav > ul > li > a{margin:.5em}
+#header ul li:hover ul{padding-left:.5em}
+#header ul li ul li a{font-size:.929em}
+}
+
+@media(max-width:29em){
+#header h1{font-size:7vw}
+h1{font-size:1.5em}
+#sheetmusic .files{display:none}
+}

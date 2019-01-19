@@ -10,6 +10,7 @@ TIMEZONE = 'America/New_York'
 DEFAULT_LANG = u'en'
 
 THEME = 'theme'
+THEME_STATIC_DIR = 'static'
 
 DEFAULT_PAGINATION = False
 

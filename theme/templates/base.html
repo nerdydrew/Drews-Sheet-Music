@@ -4,11 +4,22 @@
 	<meta charset="UTF-8" />
 	<title>Drew&rsquo;s Sheet Music</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/static/style.css" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/DrewsSheetMusic" />
 </head>
 <body>
+
+	<header id="header">
+		<h1><a href="{{ SITEURL }}">Drew&rsquo;s Sheet Music</a></h1>
+	</header>
+
 	<article>
 		{% block content %}
 		{% endblock %}
 	</article>
+
+	<footer>
+		<p><a href="http://feeds.feedburner.com/DrewsSheetMusic">RSS</a> | <a href="mailto:hi@callmedrew.com">Contact</a> | Website &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com">Drew Mitchell</a>.</p>
+	</footer>
 </body>
 </html>
