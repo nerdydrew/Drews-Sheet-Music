@@ -11,6 +11,7 @@ DEFAULT_LANG = u'en'
 
 THEME = 'theme'
 THEME_STATIC_DIR = 'static'
+TITLE_SEPARATOR = '&ndash;'
 
 DEFAULT_PAGINATION = False
 

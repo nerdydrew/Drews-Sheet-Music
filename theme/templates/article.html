@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+{% block title %}{{ article.title }} {{ TITLE_SEPARATOR}} {{ super() }}{% endblock %}
 
 {% block content %}
 	<h2>{{ article.title }}</h2>
