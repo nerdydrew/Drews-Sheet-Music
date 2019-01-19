@@ -3,11 +3,20 @@
 {% block title %}{{ article.title }} {{ TITLE_SEPARATOR}} {{ super() }}{% endblock %}
 
 {% block content %}
-	<h2>{{ article.title }}</h2>
+	<header>
+		<h1>{{ article.title }}</h1>
+		<p>Posted on {{ article.locale_date }}. From
+			{% for cat in article.category.ancestors or [article.category] %}
+				<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.shortname or cat }}</a>{{ ' &gt;' if not loop.last else '.' }}
+			{% endfor %}
+		</p>
+	</header>
 
-	{% for cat in article.category.ancestors or [article.category] %}
-		<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.shortname or cat }}</a> {{ '&gt;' if not loop.last }}
-	{% endfor %}
+	<ul>
+		<li><a href="{{ SITEURL }}/files/{{ article.fileslug }}.pdf">View the PDF</a></li>
+		<li><a href="{{ SITEURL }}/files/{{ article.fileslug }}.mid">Listen to the MIDI</a></li>
+		<li><a href="{{ SITEURL }}/files/{{ article.fileslug }}.xml">Download the MusicXML</a></li>
+	</ul>
 
 	{{ article.content }}
 
