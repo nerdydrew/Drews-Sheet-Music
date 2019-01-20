@@ -6,6 +6,7 @@ SITENAME = u"Drew\u2019s Sheet Music"
 SITEURL = '/sheetmusic'
 
 PATH = 'content'
+STATIC_PATHS = ['files']
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = u'en'
 
