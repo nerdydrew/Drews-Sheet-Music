@@ -1,6 +1,6 @@
 PY?=python
 PELICAN?=pelican
-PELICAN_OPTS= -D
+PELICAN_OPTS= --ignore-cache
 
 BASE_DIR=$(CURDIR)
 INPUT_DIR="$(BASE_DIR)/content"
