@@ -22,18 +22,8 @@
 	</header>
 
 	<section id="sheetmusic">
-		<ul class="sm">
-			{% for song in articles %}
-				<li>
-					<a href="{{SITEURL}}/{{ song.url }}"><span class="name">{{ song.title }}</span></a>
-					<span class="files">
-						<a href="{{ SITEURL }}/files/{{ song.fileslug }}.pdf">PDF</a>
-						<a href="{{ SITEURL }}/files/{{ song.fileslug }}.mid">MIDI</a>
-						<a href="{{ SITEURL }}/files/{{ song.fileslug }}.xml">MusicXML</a>
-					</span>
-				</li>
-			{% endfor %}
-		</ul>
+		{% set songs = articles %}
+		{% include "_songs_in_category.html" %}
 	</section>
 
 {% endblock %}

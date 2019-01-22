@@ -1,0 +1,34 @@
+{# caller should set: songs, category #}
+
+<ul class="sm">
+	{# Display only the songs directly belonging to this category. #}
+	{% for song in songs %}
+		{% set most_specific_category = (song.category.ancestors or [song.category])[-1] %}
+		{% if most_specific_category == category %}
+			<li>
+				<a href="{{SITEURL}}/{{ song.url }}"><span class="name">{{ song.title }}</span></a>
+				<span class="files">
+					<a href="{{ SITEURL }}/files/{{ song.fileslug }}.pdf">PDF</a>
+					<a href="{{ SITEURL }}/files/{{ song.fileslug }}.mid">MIDI</a>
+					<a href="{{ SITEURL }}/files/{{ song.fileslug }}.xml">MusicXML</a>
+				</span>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+
+<ul class="origins">
+{% for category_tuple in categories %}
+	{% set cat = category_tuple[0] %}
+	{# Recurse on direct descendants. #}
+	{% if cat.ancestors and cat.ancestors[-2] == category %}
+		<li>
+			<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.shortname or cat }}</a>
+			{% set category = cat %}
+			{% set songs = category_tuple[1] %}
+			{% include "_songs_in_category.html" %}
+		</li>
+
+	{% endif %}
+{% endfor %}
+</ul>
