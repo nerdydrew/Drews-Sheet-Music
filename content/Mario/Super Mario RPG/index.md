@@ -1,1 +1,2 @@
+Title: Super Mario RPG
 Date: 1996-03-09

@@ -78,7 +78,7 @@ def pretaxonomy_hook(generator):
     for article in real_articles:
         m = category_assignment.match(article.source_path)
         if not m or m.group(1) not in category_objects:
-            logger.info("No category assignment for %s (%s)",
+            logger.error("No category assignment for %s (%s)",
                          article, article.source_path)
             continue
 
