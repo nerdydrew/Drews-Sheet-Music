@@ -40,7 +40,7 @@ def make_category(article):
 
     # Metadata, to the extent that this makes sense.
     for k, v in article.metadata.items():
-        if k not in ('path', 'slug', 'category', 'name', 'title',
+        if k not in ('path', 'slug', 'category', 'name',
                      'description', 'reader'):
             setattr(category, k, v)
 

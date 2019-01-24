@@ -75,7 +75,7 @@ def create_categories(generator):
                 # Copy over attributes that we set in the category_meta plugin.
                 if ancestor_category.slug in original_categories:
                     original_cat = original_categories[ancestor_category.slug]
-                    copy_over_attributes(original_cat, ancestor_category, ['date'])
+                    copy_over_attributes(original_cat, ancestor_category, ['date', 'title'])
 
                 cat_dct[ancestor_category].append(article)
 
