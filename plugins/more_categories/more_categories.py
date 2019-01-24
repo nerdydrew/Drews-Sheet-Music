@@ -64,16 +64,30 @@ def get_categories(generator, metadata):
 
 
 def create_categories(generator):
-    generator.categories = []
     cat_dct = defaultdict(list)
+
+    original_categories = {c.slug: c for c, _ in generator.categories}
+
     for article in generator.articles:
-        for cat in {a for c in article.categories for a in c.ancestors}:
-            cat_dct[cat].append(article)
+        for category in article.categories:
+            for ancestor_category in category.ancestors:
+
+                # Copy over attributes that we set in the category_meta plugin.
+                if ancestor_category.slug in original_categories:
+                    original_cat = original_categories[ancestor_category.slug]
+                    copy_over_attributes(original_cat, ancestor_category, ['date'])
+
+                cat_dct[ancestor_category].append(article)
 
     generator.categories = sorted(
         list(cat_dct.items()),
         reverse=generator.settings.get('REVERSE_CATEGORY_ORDER') or False)
     generator._update_context(['categories'])
+
+def copy_over_attributes(original, destination, keys):
+    for key in keys:
+        if hasattr(original, key):
+            setattr(destination, key, getattr(original, key))
 
 
 def register():
