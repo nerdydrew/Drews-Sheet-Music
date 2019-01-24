@@ -57,34 +57,28 @@ def pretaxonomy_hook(generator):
        Article object, one per directory, whose filename is 'index.ext'.
     """
 
-    category_objects = {}
     real_articles = []
 
     for article in generator.articles:
-        dirname, fname = os.path.split(article.source_path)
+        _, fname = os.path.split(article.source_path)
         fname, _ = os.path.splitext(fname)
         if fname == 'index':
-            category_objects[dirname] = \
-                make_category(article)
+            # Only need to update generator.categories instead of iterating
+            # over each article's categories because more_categories takes
+            # care of that (if we try it here, it messes up ancestors).
+            replace_key(generator.categories, make_category(article))
         else:
             real_articles.append(article)
 
-    category_assignment = \
-        re.compile("^(" +
-                   "|".join(re.escape(prefix)
-                            for prefix in category_objects.keys()) +
-                   ")/")
-
-    for article in real_articles:
-        m = category_assignment.match(article.source_path)
-        if not m or m.group(1) not in category_objects:
-            logger.error("No category assignment for %s (%s)",
-                         article, article.source_path)
-            continue
-
-        article.category = category_objects[m.group(1)]
-
     generator.articles = real_articles
+
+def replace_key(dictionary, key):
+    """Categories are hashed by slug, so if we want to update the category
+       in the map, we need to dance around it this way.
+    """
+    value = dictionary[key]
+    del dictionary[key]
+    dictionary[key] = value
 
 def register():
     signals.article_generator_pretaxonomy.connect(pretaxonomy_hook)
