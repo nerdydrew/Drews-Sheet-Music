@@ -5,7 +5,7 @@
 	<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/static/style.css" />
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/DrewsSheetMusic" />
+	<link rel="alternate" type="application/atom+xml" title="{{ SITENAME }}: All Songs" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" />
 </head>
 <body>
 
@@ -27,7 +27,7 @@
 	</article>
 
 	<footer>
-		<p><a href="http://feeds.feedburner.com/DrewsSheetMusic">RSS</a> | <a href="mailto:hi@callmedrew.com">Contact</a> | Website &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com">Drew Mitchell</a>.</p>
+		<p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">RSS</a> | <a href="mailto:hi@callmedrew.com">Contact</a> | Website &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com">Drew Mitchell</a>.</p>
 	</footer>
 </body>
 </html>

@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 SITENAME = u"Drew\u2019s Sheet Music"
 SITEURL = '/sheetmusic'
+FEED_DOMAIN = 'https://callmedrew.com%s' % SITEURL
 
 PATH = 'content'
 STATIC_PATHS = ['files']
