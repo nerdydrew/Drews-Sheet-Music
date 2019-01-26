@@ -7,7 +7,7 @@
 		<h1>{{ article.title }}</h1>
 		<p>Posted on {{ article.locale_date }}. From
 			{% for cat in article.category.ancestors or [article.category] %}
-				<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.shortname or cat }}</a>{{ ' &gt;' if not loop.last else '.' }}
+				<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.breadcrumbname or cat.title or cat.shortname or cat }}</a>{{ ' &gt;' if not loop.last else '.' }}
 			{% endfor %}
 		</p>
 	</header>

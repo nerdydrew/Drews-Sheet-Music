@@ -23,7 +23,7 @@
 	{# Recurse on direct descendants. #}
 	{% if cat.ancestors and cat.ancestors[-2] == category %}
 		<li>
-			<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.shortname or cat }}</a>
+			<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.title or cat.shortname or cat }}</a>
 			{% set category = cat %}
 			{% set songs = category_tuple[1] %}
 			{% include "_songs_in_category.html" %}

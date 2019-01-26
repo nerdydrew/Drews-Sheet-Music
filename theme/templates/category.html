@@ -2,7 +2,7 @@
 
 {% block title %}
 	{% for cat in category.ancestors|sort(reverse=True) or [category] %}
-		{{ cat.shortname or cat }}
+		{{ cat.title or cat.shortname or cat }}
 		{{ ' &lt;' if not loop.last }}
 	{% endfor %}
 	{{ TITLE_SEPARATOR}} {{ super() }}
@@ -15,7 +15,7 @@
 				{% if not loop.last %}
 					<a href="{{ SITEURL }}/{{ cat.url }}">
 				{% endif %}
-				{{ cat.shortname or cat }}
+				{{ cat.breadcrumbname or cat.title or cat.shortname or cat }}
 				{{ '</a> &gt;' if not loop.last }}
 			{% endfor %}
 		</h1>

@@ -9,6 +9,7 @@ PATH = 'content'
 STATIC_PATHS = ['files']
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = u'en'
+DEFAULT_DATE = 'fs'
 
 THEME = 'theme'
 THEME_STATIC_DIR = 'static'

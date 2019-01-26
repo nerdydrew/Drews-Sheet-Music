@@ -13,6 +13,8 @@ from pelican.utils import (slugify, python_2_unicode_compatible)
 from collections import defaultdict
 from six import text_type
 
+CATEGORY_ATTRIBUTES = ['date', 'title', 'breadcrumbname']
+
 class Category(URLWrapper):
     @property
     def _name(self):
@@ -75,7 +77,7 @@ def create_categories(generator):
                 # Copy over attributes that we set in the category_meta plugin.
                 if ancestor_category.slug in original_categories:
                     original_cat = original_categories[ancestor_category.slug]
-                    copy_over_attributes(original_cat, ancestor_category, ['date', 'title'])
+                    copy_over_attributes(original_cat, ancestor_category, CATEGORY_ATTRIBUTES)
 
                 cat_dct[ancestor_category].append(article)
 
