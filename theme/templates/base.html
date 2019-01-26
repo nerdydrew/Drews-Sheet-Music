@@ -11,6 +11,14 @@
 
 	<header id="header">
 		<h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+
+		<nav>
+			<ul>
+				{% for cat in categories|map(attribute=0) %}
+					{% if cat.ancestors|length == 1 %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.title or cat }}</a></li>{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
 	</header>
 
 	<article>

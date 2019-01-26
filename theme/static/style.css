@@ -26,15 +26,7 @@ input[type="search"]{width:20em}
 #header ul{list-style:none;margin:0;padding:0;z-index:100}
 #header ul li{position:relative;display:inline-block;margin:.5em 0;}
 #header ul a{padding:.5em 2em;background:#CBD7B3;color:#000;text-decoration:none;border:1px solid #613F19;margin-left:-1px;white-space:nowrap}
-
-#header ul li ul{display:none}
-#header ul li:hover ul{display:block;position:absolute;top:1.8em;left:0;z-index:200;text-align:left;box-shadow:.5em .5em 1em rgba(0,0,0,.25)}
-#header ul li:hover ul li{display:inline;margin:0}
-#header ul li:hover a{background:#ACBF87}
-#header ul li:hover ul li a{display:block;padding:.25em 1em;background:#ACBF87;border-top-width:0}
-#header ul li:hover ul li:first-child a{border-top-width:1px}
-#header ul li:hover ul li a:hover{background:#CC9E48}
-
+#header ul a:hover{background:#CC9E48}
 
 article{clear:both}
 article header p{font-size:.875em;opacity:.8;margin:.5em 0 1em}
