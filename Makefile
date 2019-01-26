@@ -7,20 +7,7 @@ INPUT_DIR="$(BASE_DIR)/content"
 SERVE_DIR= "$(BASE_DIR)/_output"
 OUTPUT_DIR="$(BASE_DIR)/_output/sheetmusic"
 CONF_FILE="$(BASE_DIR)/pelicanconf.py"
-
-help:
-	@echo 'Makefile for a pelican Web site                                           '
-	@echo '                                                                          '
-	@echo 'Usage:                                                                    '
-	@echo '   make html                           (re)generate the web site          '
-	@echo '   make clean                          remove the generated files         '
-	@echo '   make regenerate                     regenerate files upon modification '
-	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
-	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
-	@echo '                                                                          '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
-	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
-	@echo '                                                                          '
+PROD_CONF_FILE="$(BASE_DIR)/publishconf.py"
 
 html:
 	$(PELICAN) $(INPUT_DIR) -o $(OUTPUT_DIR) -s $(CONF_FILE) $(PELICAN_OPTS)
@@ -45,5 +32,7 @@ else
 	$(PELICAN) -l $(INPUT_DIR) -o $(SERVE_DIR) -s $(CONF_FILE) $(PELICAN_OPTS) -p $(PORT) -b 0.0.0.0
 endif
 
+publish:
+	$(PELICAN) $(INPUT_DIR) -o $(OUTPUT_DIR) -s $(PROD_CONF_FILE) $(PELICAN_OPTS)
 
-.PHONY: html help clean regenerate serve serve-global
+.PHONY: html clean regenerate serve serve-global publish

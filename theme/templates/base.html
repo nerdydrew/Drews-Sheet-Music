@@ -5,7 +5,18 @@
 	<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/static/style.css" />
-	<link rel="alternate" type="application/atom+xml" title="{{ SITENAME }}: All Songs" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" />
+	<link rel="alternate" type="application/atom+xml" title="{{ SITENAME }}: All Songs" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" />
+
+	{% if GOOGLE_ANALYTICS %}
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', '{{ GOOGLE_ANALYTICS }}', 'auto');
+			ga('send', 'pageview');
+		</script>
+	{% endif %}
 </head>
 <body>
 
@@ -27,7 +38,7 @@
 	</article>
 
 	<footer>
-		<p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">RSS</a> | <a href="mailto:hi@callmedrew.com">Contact</a> | Website &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com">Drew Mitchell</a>.</p>
+		<p><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}">RSS</a> | <a href="mailto:hi@callmedrew.com">Contact</a> | Website &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com">Drew Mitchell</a>.</p>
 	</footer>
 </body>
 </html>
