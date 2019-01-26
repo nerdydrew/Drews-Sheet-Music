@@ -1,2 +1,2 @@
 Title: Legend of Zelda
-Date: 1986-01-01
+ReleaseDate: 1986-01-01

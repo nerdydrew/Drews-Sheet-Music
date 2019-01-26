@@ -1,2 +1,2 @@
 Title: Super Mario Galaxy
-Date: 2007-01-01
+ReleaseDate: 2007-01-01

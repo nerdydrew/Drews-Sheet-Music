@@ -1,2 +1,2 @@
 Title: Mario Kart Wii
-Date: 2008-04-10
+ReleaseDate: 2008-04-10

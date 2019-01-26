@@ -1,2 +1,2 @@
 Title: Metroid
-Date: 1986-08-06
+ReleaseDate: 1986-08-06

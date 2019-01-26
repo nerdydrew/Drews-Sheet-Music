@@ -3,7 +3,7 @@ from operator import attrgetter
 
 def sort_key(cat_tuple):
 	category = cat_tuple[0]
-	return str(getattr(category, 'date', category))
+	return str(getattr(category, 'releasedate', category))
 
 
 def set_category_order(generator):

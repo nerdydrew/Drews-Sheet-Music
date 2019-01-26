@@ -1,2 +1,2 @@
 Title: Mario & Luigi: Superstar Saga
-Date: 2003-01-01
+ReleaseDate: 2003-01-01

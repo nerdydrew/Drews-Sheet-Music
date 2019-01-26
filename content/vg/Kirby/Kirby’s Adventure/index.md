@@ -1,2 +1,2 @@
 Title: Kirby’s Adventure
-Date: 1993-01-01
+ReleaseDate: 1993-01-01

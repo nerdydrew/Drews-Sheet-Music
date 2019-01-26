@@ -1,3 +1,3 @@
 Title: Legend of Zelda: A Link to the Past
 BreadcrumbName: A Link to the Past
-Date: 1991-01-01
+ReleaseDate: 1991-01-01

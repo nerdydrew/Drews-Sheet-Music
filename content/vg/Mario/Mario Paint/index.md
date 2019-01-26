@@ -1,2 +1,2 @@
 Title: Mario Paint
-Date: 1992-07-14
+ReleaseDate: 1992-07-14

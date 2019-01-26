@@ -1,2 +1,2 @@
 Title: Final Fantasy I
-Date: 1987-12-18
+ReleaseDate: 1987-12-18

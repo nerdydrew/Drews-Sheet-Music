@@ -13,7 +13,7 @@ from pelican.utils import (slugify, python_2_unicode_compatible)
 from collections import defaultdict
 from six import text_type
 
-CATEGORY_ATTRIBUTES = ['date', 'title', 'breadcrumbname']
+CATEGORY_ATTRIBUTES = ['releasedate', 'title', 'breadcrumbname']
 
 class Category(URLWrapper):
     @property

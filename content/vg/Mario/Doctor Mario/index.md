@@ -1,2 +1,2 @@
 Title: Doctor Mario
-Date: 1990-07-27
+ReleaseDate: 1990-07-27

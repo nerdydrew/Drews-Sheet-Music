@@ -1,2 +1,2 @@
 Title: Mario Kart Super Circuit
-Date: 2001-07-21
+ReleaseDate: 2001-07-21

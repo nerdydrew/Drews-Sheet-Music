@@ -1,2 +1,2 @@
 Title: Animal Crossing
-Date: 2001-12-14
+ReleaseDate: 2001-12-14

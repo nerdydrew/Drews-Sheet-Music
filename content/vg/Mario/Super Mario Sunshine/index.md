@@ -1,2 +1,2 @@
 Title: Super Mario Sunshine
-Date: 2002-01-01
+ReleaseDate: 2002-01-01
