@@ -14,7 +14,7 @@
 
 		<nav>
 			<ul>
-				{% for cat in categories|map(attribute=0) %}
+				{% for cat in categories|sort(reverse=True)|map(attribute=0) %}
 					{% if cat.ancestors|length == 1 %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.title or cat }}</a></li>{% endif %}
 				{% endfor %}
 			</ul>
