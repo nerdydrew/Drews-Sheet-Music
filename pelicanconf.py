@@ -27,11 +27,11 @@ PLUGINS = ['more_categories', 'sort_categories', 'category_meta']
 PATH_METADATA = '(?P<category>.*)/.*'
 
 # URLs
-ARTICLE_URL = '{category}/{slug}'
-ARTICLE_SAVE_AS = '%s/index.html' % ARTICLE_URL
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = '%sindex.html' % ARTICLE_URL
 
-CATEGORY_URL = '{slug}'
-CATEGORY_SAVE_AS = '%s/index.html' % CATEGORY_URL
+CATEGORY_URL = '{slug}/'
+CATEGORY_SAVE_AS = '%sindex.html' % CATEGORY_URL
 
 AUTHOR_SAVE_AS = False
 AUTHORS_SAVE_AS = False
