@@ -1,13 +1,12 @@
 html,body,div,dl,dt,dd,ul,ol,li,pre,form,label,fieldset,p,blockquote{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
-html{background:#f9f8ef;color:#462e12;font:1em/1.7 Georgia,serif}
+html{background:#FFF;color:#444;font:1em/1.7 Helvetica Neue,Arial,sans-serif}
 body{margin:0 auto;max-width:38em;padding:0 1em}
 
-a{color:#070;text-decoration:underline}
-a:hover{color:#090}
+a{color:#0A7;text-decoration:none}
+a:hover{text-decoration:underline}
 
-h1,h2,h3,h4,h5,h6{margin:0;font-weight:400;font-variant:small-caps;letter-spacing:.05em}
-h1{font-size:2em}h2{font-size:1.5em}h3,h4,h5,h6{font-size:1.25em}
-h1 a,h2 a{text-decoration:none}
+h1,h2,h3,h4,h5,h6{font-weight:400}
+h1{font-size:1.75em}h2{font-size:1.5em}h3,h4,h5,h6{font-size:1.25em}
 
 p,ul,ol{margin:0 0 1.5em}
 
@@ -18,27 +17,27 @@ input[type="search"]{width:20em}
 
 #header{margin-bottom:1em}
 #header h1{font-size:2.5em;margin:.25em 0;text-align:center}
-#header h1 a{text-decoration:none}
+#header h1 a{color:#000}
 
 
 #header nav{font-size:.875em;text-align:center}
 
 #header ul{list-style:none;margin:0;padding:0;z-index:100}
 #header ul li{position:relative;display:inline-block;margin:.5em 0;}
-#header ul a{padding:.5em 2em;background:#CBD7B3;color:#000;text-decoration:none;border:1px solid #613F19;margin-left:-1px;white-space:nowrap}
-#header ul a:hover{background:#CC9E48}
+#header ul a{padding:.5em 2em;background:#E0E8E4;color:#000;text-decoration:none;border:1px solid #613F19;margin-left:-1px;white-space:nowrap}
+#header ul a:hover{background:#B9CBC2}
 
 article{clear:both}
 article header p{font-size:.875em;opacity:.8;margin:.5em 0 1em}
 
 
-footer{margin:3em 0;font-size:.875em;text-align:center;color:rgba(0,0,0,.75);clear:both}
+footer{margin:3em 0;font-size:.875em;text-align:center;clear:both}
 
 
 /** Background colors */
-#sheetmusic .origins > li > a{background:#ACBF87;font-weight:700}
-#sheetmusic li{background:#CBD7B3}
-#sheetmusic .origins > li > a:hover,#sheetmusic .sm > li:hover{background:#CC9E48}
+#sheetmusic .origins > li > a{background:#cddad3;font-weight:700}
+#sheetmusic li{background:#E0E8E4}
+#sheetmusic .origins > li > a:hover,#sheetmusic .sm > li:hover{background:#B9CBC2}
 
 /** Indenting (dumb, but this does what I want) */
 #sheetmusic ul{padding-left:0;list-style-type:none}
@@ -51,21 +50,21 @@ footer{margin:3em 0;font-size:.875em;text-align:center;color:rgba(0,0,0,.75);cle
 #sheetmusic li > a{display:block;padding:.125em .5em}
 
 /** Table-ness */
-#sheetmusic{border:1px solid #613F19;border-top-width:0}
+#sheetmusic{border:1px solid;border-top-width:0}
 #sheetmusic ul{display:table;width:100%;border-collapse:collapse;margin:0}
 #sheetmusic .origins > li, #sheetmusic .sm > li{display:table-row}
-#sheetmusic .origins > li > a, #sheetmusic .sm > li{border-top:1px solid #613F19}
+#sheetmusic .origins > li > a, #sheetmusic .sm > li{border-top:1px solid}
 #sheetmusic .name, #sheetmusic .files{display:table-cell}
 
 #sheetmusic .files{white-space:nowrap;width:1%;padding:0 .5em}
 #sheetmusic .files a{margin:0 .25em}
 #sheetmusic .files a:hover{text-decoration:underline}
 
-ul.vg-origins{color:#000;list-style:none;padding:0;display:grid;grid-gap:1em;
+ul.vg-origins{color:#000;list-style:none;padding:0;display:grid;grid-gap:.5em;
 	grid-template-columns:repeat(auto-fill, minmax(8em, 1fr));grid-auto-rows:minmax(3em, auto)}
 ul.vg-origins li a{opacity:.8;display:block;height:100%;text-align:center;display:flex;justify-content:center;align-items:center;
 	color:inherit;border:1px solid #000;text-decoration:none}
-	ul.vg-origins li a:hover{opacity:1}
+ul.vg-origins li a:hover{opacity:1}
 
 @media (max-width:36em){
 #header ul a{margin:0}
@@ -83,7 +82,7 @@ h1{font-size:1.5em}
 .origin-animal-crossing{background:#96E4B6}
 .origin-arcade-games{background:#EAE900}
 .origin-bravely-default{background:#CEBB96}
-ul.vg-origins .origin-castlevania{background:#012d62;color:#FFF}
+ul.vg-origins .origin-castlevania{background:#012D62;color:#FFF}
 ul.vg-origins .origin-cave-story{background:#B83A1B;color:#FFF}
 ul.vg-origins .origin-donkey-kong{background:#994417;color:#FFF}
 .origin-dragon-quest{background:#40B1F9}
@@ -98,10 +97,10 @@ ul.vg-origins .origin-legend-of-zelda{background:#019537;color:#FFF}
 ul.vg-origins .origin-mario{background:#E81412;color:#FFF}
 .origin-mega-man{background:#96C7DE}
 ul.vg-origins .origin-metal-gear{background:#444f69;color:#FFF}
-.origin-metroid{background:#efb95b}
+.origin-metroid{background:#EFB95B}
 ul.vg-origins .origin-mortal-kombat{background:#ae2740;color:#FFF}
 .origin-nintendo-wii{background:#9CDAE5}
-ul.vg-origins .origin-phoenix-wright-ace-attorney{background:#4650a0;color:#FFF}
+ul.vg-origins .origin-phoenix-wright-ace-attorney{background:#4650A0;color:#FFF}
 .origin-pokemon{background:#F7C603}
 .origin-shin-onigashima{background:#67AFCE}
 ul.vg-origins .origin-smash{background:#EF2721;color:#FFF}
