@@ -27,9 +27,9 @@ endif
 
 serve-global:
 ifdef SERVER
-	$(PELICAN) -l $(INPUT_DIR) -o $(SERVE_DIR) -s $(CONF_FILE) $(PELICAN_OPTS) -p $(PORT) -b $(SERVER)
+	$(PELICAN) -l $(INPUT_DIR) -o $(SERVE_DIR) -s $(CONF_FILE) $(PELICAN_OPTS) -b $(SERVER)
 else
-	$(PELICAN) -l $(INPUT_DIR) -o $(SERVE_DIR) -s $(CONF_FILE) $(PELICAN_OPTS) -p $(PORT) -b 0.0.0.0
+	$(PELICAN) -l $(INPUT_DIR) -o $(SERVE_DIR) -s $(CONF_FILE) $(PELICAN_OPTS) -b 0.0.0.0
 endif
 
 publish:

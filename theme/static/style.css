@@ -61,7 +61,11 @@ footer{margin:3em 0;font-size:.875em;text-align:center;color:rgba(0,0,0,.75);cle
 #sheetmusic .files a{margin:0 .25em}
 #sheetmusic .files a:hover{text-decoration:underline}
 
-
+ul.vg-origins{list-style:none;padding:0;display:grid;grid-gap:1em;
+	grid-template-columns:repeat(auto-fill, minmax(8em, 1fr));grid-auto-rows:minmax(3em, auto)}
+ul.vg-origins li a{display:block;height:100%;text-align:center;display:flex;justify-content:center;align-items:center;
+	background:#CBD7B3;color:#000;border:1px solid;text-decoration:none}
+ul.vg-origins li a:hover{background:#CC9E48}
 
 @media (max-width:36em){
 #header ul a{margin:0}
