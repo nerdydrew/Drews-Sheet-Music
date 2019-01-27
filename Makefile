@@ -8,6 +8,7 @@ SERVE_DIR= "$(BASE_DIR)/_output"
 OUTPUT_DIR="$(BASE_DIR)/_output/sheetmusic"
 CONF_FILE="$(BASE_DIR)/pelicanconf.py"
 PROD_CONF_FILE="$(BASE_DIR)/publishconf.py"
+DEPLOY_BUCKET = 's3://callmedrew.com/sheetmusic/'
 
 html:
 	$(PELICAN) $(INPUT_DIR) -o $(OUTPUT_DIR) -s $(CONF_FILE) $(PELICAN_OPTS)
@@ -35,4 +36,10 @@ endif
 publish:
 	$(PELICAN) $(INPUT_DIR) -o $(OUTPUT_DIR) -s $(PROD_CONF_FILE) $(PELICAN_OPTS)
 
-.PHONY: html clean regenerate serve serve-global publish
+preview:
+	aws s3 sync --dryrun --delete $(OUTPUT_DIR) $(DEPLOY_BUCKET)
+
+deploy:
+	aws s3 sync --delete $(OUTPUT_DIR) $(DEPLOY_BUCKET)
+
+.PHONY: html clean regenerate serve serve-global publish preview deploy
