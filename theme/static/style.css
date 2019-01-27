@@ -5,7 +5,7 @@ body{margin:0 auto;max-width:38em;padding:0 1em}
 a{color:#0A7;text-decoration:none}
 a:hover{text-decoration:underline}
 
-h1,h2,h3,h4,h5,h6{font-weight:400}
+h1,h2,h3,h4,h5,h6{font-weight:400;margin:.5em 0}
 h1{font-size:1.75em}h2{font-size:1.5em}h3,h4,h5,h6{font-size:1.25em}
 
 p,ul,ol{margin:0 0 1.5em}
@@ -13,29 +13,22 @@ p,ul,ol{margin:0 0 1.5em}
 ul,ol{padding-left:2em}
 ul ul,ol ol{margin:0}
 
-input[type="search"]{width:20em}
-
 #header{margin-bottom:1em}
 #header h1{font-size:2.5em;margin:.25em 0;text-align:center}
 #header h1 a{color:#000}
 
+#header nav{text-align:center}
 
-#header nav{font-size:.875em;text-align:center}
-
-#header ul{list-style:none;margin:0;padding:0;z-index:100}
-#header ul li{position:relative;display:inline-block;margin:.5em 0;}
-#header ul a{padding:.5em 2em;background:#E0E8E4;color:#000;text-decoration:none;border:1px solid #613F19;margin-left:-1px;white-space:nowrap}
+#header ul{list-style:none;margin:0;padding:0;display:grid;grid-gap:0;grid-template-columns:repeat(auto-fill, minmax(8em, 1fr))}
+#header ul a{display:block;padding:.25em;background:#E0E8E4;color:#000;text-decoration:none;margin:-1px 0 0 -1px;border:1px solid;white-space:nowrap}
 #header ul a:hover{background:#B9CBC2}
 
-article{clear:both}
-article header p{font-size:.875em;opacity:.8;margin:.5em 0 1em}
+article header p{font-size:.875em;opacity:.8;margin:0 0 1em}
 
-
-footer{margin:3em 0;font-size:.875em;text-align:center;clear:both}
-
+footer{margin:3em 0;font-size:.875em;text-align:center}
 
 /** Background colors */
-#sheetmusic .origins > li > a{background:#cddad3;font-weight:700}
+#sheetmusic .origins > li > a{background:#CDDAD3;font-weight:700}
 #sheetmusic li{background:#E0E8E4}
 #sheetmusic .origins > li > a:hover,#sheetmusic .sm > li:hover{background:#B9CBC2}
 
@@ -66,17 +59,10 @@ ul.vg-origins li a{opacity:.8;display:block;height:100%;text-align:center;displa
 	color:inherit;border:1px solid #000;text-decoration:none}
 ul.vg-origins li a:hover{opacity:1}
 
-@media (max-width:36em){
-#header ul a{margin:0}
-#header > nav > ul > li > a{margin:.5em}
-#header ul li:hover ul{padding-left:.5em}
-#header ul li ul li a{font-size:.929em}
-}
-
 @media(max-width:29em){
-#header h1{font-size:7vw}
-h1{font-size:1.5em}
-#sheetmusic .files{display:none}
+	#header h1{font-size:7vw}
+	h1{font-size:1.5em}
+	#sheetmusic .files{display:none}
 }
 
 .origin-animal-crossing{background:#96E4B6}
