@@ -1,0 +1,11 @@
+<ul class="vg-origins">
+{% for cat in categories|map(attribute=0) %}
+	{# Recurse on direct descendants. #}
+	{% if cat.ancestors and cat.ancestors[-2] == category %}
+		<li>
+			<a href="{{ SITEURL }}/{{ cat.url }}" class="origin-{{ cat.slug.split('/')[-1] }}">{{ cat.title or cat.shortname or cat }}</a>
+		</li>
+
+	{% endif %}
+{% endfor %}
+</ul>

@@ -21,9 +21,13 @@
 		</h1>
 	</header>
 
-	<section id="sheetmusic">
-		{% set songs = articles %}
-		{% include "_songs_in_category.html" %}
-	</section>
+	{% if category.slug == 'vg' %}
+		{% include "_category_vg.html" %}
+	{% else %}
+		<section id="sheetmusic">
+			{% set songs = articles %}
+			{% include "_songs_in_category.html" %}
+		</section>
+	{% endif %}
 
 {% endblock %}
