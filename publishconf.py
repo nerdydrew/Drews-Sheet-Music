@@ -9,5 +9,3 @@ from pelicanconf import *
 
 SITEURL = 'https://callmedrew.com/sheetmusic'
 RELATIVE_URLS = False
-
-GOOGLE_ANALYTICS = 'UA-15477984-17'
