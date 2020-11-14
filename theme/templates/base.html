@@ -15,8 +15,8 @@
 
 		<nav>
 			<ul>
-				{% for cat in categories|sort(reverse=True)|map(attribute=0) %}
-					{% if cat.ancestors|length == 1 %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.title or cat }}</a></li>{% endif %}
+				{% for cat, songs in categories|sort(reverse=True) %}
+					{% if cat.ancestors|length == 1 %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.title or cat }} ({{ songs|length }})</a></li>{% endif %}
 				{% endfor %}
 			</ul>
 		</nav>

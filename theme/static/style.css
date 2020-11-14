@@ -1,6 +1,6 @@
 html,body,div,dl,dt,dd,ul,ol,li,pre,form,label,fieldset,p,blockquote{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
 html{background:#FFF;color:#444;font:1em/1.7 Helvetica Neue,Arial,sans-serif}
-body{margin:0 auto;max-width:38em;padding:0 1em}
+body{margin:0 auto;max-width:40em;padding:0 1em}
 
 a{color:#0A7;text-decoration:none}
 a:hover{text-decoration:underline}
@@ -20,7 +20,7 @@ ul ul,ol ol{margin:0}
 
 #header nav{text-align:center}
 
-#header ul{list-style:none;margin:0;padding:0;display:grid;grid-gap:0;grid-template-columns:repeat(auto-fill, minmax(8em, 1fr))}
+#header ul{list-style:none;margin:0;padding:0;display:grid;grid-gap:0;grid-template-columns:repeat(auto-fill, minmax(10em, 1fr))}
 #header ul a{display:block;padding:.25em;background:#E0E8E4;color:#000;text-decoration:none;margin:-1px 0 0 -1px;border:1px solid;white-space:nowrap}
 #header ul a:hover{background:#B9CBC2}
 
@@ -57,7 +57,7 @@ footer{margin:3em 0;font-size:.875em;text-align:center}
 ul.vg-origins{color:#000;list-style:none;padding:0;display:grid;grid-gap:.5em;
 	grid-template-columns:repeat(auto-fill, minmax(8em, 1fr));grid-auto-rows:minmax(3em, auto)}
 ul.vg-origins li a{opacity:.8;display:block;height:100%;text-align:center;display:flex;justify-content:center;align-items:center;
-	color:inherit;border:1px solid #000;text-decoration:none}
+	color:inherit;border:1px solid #000;text-decoration:none;padding:0 .5em}
 ul.vg-origins li a:hover{opacity:1}
 
 a.circle{border:1px solid;border-radius:1em;padding:0 .35em;margin:0 .125em}

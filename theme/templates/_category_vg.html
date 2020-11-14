@@ -1,9 +1,9 @@
 <ul class="vg-origins">
-{% for cat in categories|map(attribute=0) %}
+{% for cat, songs in categories %}
 	{# Recurse on direct descendants. #}
 	{% if cat.ancestors and cat.ancestors[-2] == category %}
 		<li>
-			<a href="{{ SITEURL }}/{{ cat.url }}" class="origin-{{ cat.slug.split('/')[-1] }}">{{ cat.title or cat.shortname or cat }}</a>
+			<a href="{{ SITEURL }}/{{ cat.url }}" class="origin-{{ cat.slug.split('/')[-1] }}">{{ cat.title or cat.shortname or cat }} ({{ songs|length }})</a>
 		</li>
 
 	{% endif %}
