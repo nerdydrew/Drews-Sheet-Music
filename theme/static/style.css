@@ -13,9 +13,10 @@ p,ul,ol{margin:0 0 1.5em}
 ul,ol{padding-left:2em}
 ul ul,ol ol{margin:0}
 
-#header{margin-bottom:1em}
-#header h1{font-size:2.5em;margin:.25em 0;text-align:center}
+#header{margin-bottom:1em;text-align:center}
+#header h1{font-size:2.5em;margin:.25em 0 0}
 #header h1 a{color:#000}
+#header h2{margin:-.5em 0 .5em}
 
 #header nav{text-align:center}
 
@@ -59,8 +60,12 @@ ul.vg-origins li a{opacity:.8;display:block;height:100%;text-align:center;displa
 	color:inherit;border:1px solid #000;text-decoration:none}
 ul.vg-origins li a:hover{opacity:1}
 
+a.circle{border:1px solid;border-radius:1em;padding:0 .35em;margin:0 .125em}
+a.circle:hover{background:#0A7;color:#FFF;text-decoration:none}
+
 @media(max-width:29em){
 	#header h1{font-size:7vw}
+	#header h2{font-size:5vw}
 	h1{font-size:1.5em}
 	#sheetmusic .files{display:none}
 }
