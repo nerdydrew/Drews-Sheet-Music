@@ -9,7 +9,7 @@ DEV_OUTPUT_DIR="$(BASE_DIR)/_output/sheetmusic"
 PROD_OUTPUT_DIR="$(BASE_DIR)/_output/production"
 CONF_FILE="$(BASE_DIR)/pelicanconf.py"
 PROD_CONF_FILE="$(BASE_DIR)/publishconf.py"
-DEPLOY_BUCKET = 's3://callmedrew.com/sheetmusic/'
+DEPLOY_BUCKET = 's3://drewm.com/sheetmusic/'
 
 html:
 	$(PELICAN) $(INPUT_DIR) -o $(DEV_OUTPUT_DIR) -s $(CONF_FILE) $(PELICAN_OPTS)

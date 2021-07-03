@@ -7,5 +7,5 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://callmedrew.com/sheetmusic'
+SITEURL = 'https://drewm.com/sheetmusic'
 RELATIVE_URLS = False
