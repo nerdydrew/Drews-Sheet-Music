@@ -11,6 +11,11 @@ CONF_FILE="$(BASE_DIR)/pelicanconf.py"
 PROD_CONF_FILE="$(BASE_DIR)/publishconf.py"
 DEPLOY_BUCKET = 's3://drewm.com/sheetmusic/'
 
+# To use the environment: source venv/bin/activate
+venv:
+	$(PY) -m venv venv
+	./venv/bin/pip3 install -r requirements.txt
+
 html:
 	$(PELICAN) $(INPUT_DIR) -o $(DEV_OUTPUT_DIR) -s $(CONF_FILE) $(PELICAN_OPTS)
 
@@ -43,4 +48,4 @@ preview:
 deploy:
 	aws s3 sync --delete $(PROD_OUTPUT_DIR) $(DEPLOY_BUCKET)
 
-.PHONY: html clean regenerate serve serve-global publish preview deploy
+.PHONY: venv html clean regenerate serve serve-global publish preview deploy
